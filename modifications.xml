@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!DOCTYPE modification SYSTEM "http://www.simplemachines.org/xml/modification">
+
+<modification xmlns="http://www.simplemachines.org/xml/modification" xmlns:smf="http://www.simplemachines.org/">
+
+	<id>Neo_TE:Simple_Off_Topic_BBC</id>
+	<version>1.0</version>
+
+	<file name="$sourcedir/Subs.php">
+		<operation>
+			<search position="before"><![CDATA[
+			array(
+				'tag' => 'nobbc',
+				'type' => 'unparsed_content',
+				'content' => '$1',
+			),]]></search>
+
+			<add><![CDATA[
+			array(
+				'tag' => 'ot',
+				'before' => '<div class="quoteheader">' . $txt['bbc_off_topic_icon'] . '</div><div class="information">',
+				'after' => '</div>',
+				'block_level' => true,
+			),
+			array(
+				'tag' => 'ot',
+				'type' => 'parsed_equals',
+				'before' => '<div class="quoteheader">' . $txt['bbc_off_topic_icon'] . '</div><div class="information">',
+				'after' => '$1</div>',
+				'quoted' => 'optional',
+				'block_level' => true,
+			),]]></add>
+		</operation>
+	</file>
+
+	<file name="$sourcedir/Subs-Editor.php">
+		<operation>
+			<search position="before"><![CDATA[
+			array(
+				'image' => 'move',
+				'code' => 'move',
+				'before' => '[move]',
+				'after' => '[/move]',
+				'description' => $txt['marquee']
+			),]]></search>
+
+			<add><![CDATA[
+			array(
+				'image' => 'off_topic',
+				'code' => 'ot',
+				'before' => '[ot]',
+				'after' => '[/ot]',
+				'description' => $txt['bbc_off_topic']
+			),]]></add>
+		</operation>
+	</file>
+
+</modification>

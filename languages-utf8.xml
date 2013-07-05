@@ -1,0 +1,23 @@
+﻿<?xml version="1.0"?>
+<!DOCTYPE modification SYSTEM "http://www.simplemachines.org/xml/modification">
+
+<modification xmlns="http://www.simplemachines.org/xml/modification" xmlns:smf="http://www.simplemachines.org/">
+
+	<id>Neo_TE:Simple_Off_Topic_BBC</id>
+	<version>1.0</version>
+
+	<file name="$languagedir/Modifications.english-utf8.php" error="skip">
+		<operation>
+			<search position="end" />
+			<add><![CDATA[
+// Start Simple Off-Topic BBC
+global $settings;
+$txt['bbc_off_topic'] = 'Off-Topic';
+$txt['bbc_off_topic_icon'] = '<img src="' . $settings['images_url'] . '/warn.gif" alt="" /> Off-Topic:';
+// End Simple Off-Topic BBC
+
+]]></add>
+		</operation>
+	</file>
+
+</modification>
