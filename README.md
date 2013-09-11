@@ -2,7 +2,7 @@ Simple Off-Topic BBC
 ====================
 This mod adds a "off-topic" BBC which can be used to highlight off-topic content in posts.
 
-> This is a "modification package" for Simple Machines Forum 2.0.x*
+> This is a "modification package" for Simple Machines Forum 2.0.x
 
 Version
 -------
